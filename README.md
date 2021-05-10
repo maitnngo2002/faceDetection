@@ -2,7 +2,7 @@
 
 **NOTE**: Face detection is different from face recognition (face verification)
       
-          Face detection is to **detect faces** in a(n) image/video while face recognition is to **match a human face** in a(n) image/video **against a database of faces**
+ Face detection is to **detect faces** in a(n) image/video while face recognition is to **match a human face** in a(n) image/video **against a database of faces**
 
 # Install necessary libraries
 
