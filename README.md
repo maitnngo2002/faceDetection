@@ -4,13 +4,6 @@
       
  Face detection is to **detect faces** in a(n) image/video while face recognition is to **match a human face** in a(n) image/video **against a database of faces**
 
-### Install necessary libraries
-
-To start, you must **install Dlib and OpenCV**
-
-With OpenCV, you just need to type into your terminal `pip install opencv-python`
-
-To install Dlib, follow this [Guide](https://medium.com/analytics-vidhya/how-to-install-dlib-library-for-python-in-windows-10-57348ba1117f)
 
 ### Techniques that I used
 
