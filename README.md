@@ -32,6 +32,7 @@ Luckily, OpenCV has all above algorithms pretrained for us!
 ## Histogram of oriented gradients (HOG)
 
 To implement this technique we must install **Dlib** library -->> Follow this [Guide](https://medium.com/analytics-vidhya/how-to-install-dlib-library-for-python-in-windows-10-57348ba1117f)
+
 The idea is to extract features into a vector which will then be fed into a classification algorithm like Support Vector Machine (SVM) to access whether a face is present in a region or not ( **person/ non-person classification**)
 
 Firstly, we must ensure all images are of the same size by cropping and rescaling them to ratio 1 : 2
