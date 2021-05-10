@@ -7,6 +7,13 @@
 
 ### Techniques that I used
 
+I implement the face detection model by two ways ( **Cascade Classifier** and **Histogram of oriented gradients ( HOG)**
+
+For the first way, check the file name *face_detection*.
+For the second way, check the file name *face_detection_using_HOG*
+
+## Haar Cascade Classifier
+
 To detect face in an image -> use **Haar Cascades Classifier** in which a cascade function is trained from lots of image (both positive and negative) and is used to detect objects/ faces in other images
 
 **Haar Cascades Classifier** works as a convolutional kernel which extracts features from images using some sort of filters (called *Haar features). 
@@ -20,3 +27,18 @@ On the other parts, we need to know **which features are relevant** and which on
 
 
 Luckily, OpenCV has all above algorithms pretrained for us!
+
+
+## Histogram of oriented gradients (HOG)
+
+To implement this technique we must install **Dlib** library -->> Follow this [Guide](https://medium.com/analytics-vidhya/how-to-install-dlib-library-for-python-in-windows-10-57348ba1117f)
+The idea is to extract features into a vector which will then be fed into a classification algorithm like Support Vector Machine (SVM) to access whether a face is present in a region or not ( **person/ non-person classification**)
+
+Firstly, we must ensure all images are of the same size by cropping and rescaling them to ratio 1 : 2
+
+Next, compute gradient images by applying **Sobel filter**
+
+Then, we divide the image into 8x8 cells and **compute HOG for each cell**. To estimate the direction of a gradient inside a region, we build a histogram among 64 values of gradient directions and their magnitude (another 64 values) inside each region
+
+The final step is **block normalization** - dividing each value of the HOG of size 8x8 by the L2-norm of the HOG of the 16x16 block that contains it, which is in fact a simple vector of length 9 x 4 = 36.
+And all 36 x 1 vectors are concatenated into a large vector
